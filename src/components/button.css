@@ -1,11 +1,11 @@
 .button{
-    padding: .5%;
+    padding: .7%;
     display: flex;
     position: relative;
     /* height: 9%; */
     width: 9%;
     background-color: bisque;
-    border: 4px solid beige;
+    border: 1px solid rgb(135, 135, 102);
     border-radius: 20%;
     text-decoration: none;
     color: rgb(24, 41, 41);
@@ -18,5 +18,5 @@
 }
 
 .button:hover {
-    background-color: aliceblue;
+    background-color: rgba(255, 228, 196, 0.647);
 }
