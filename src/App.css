@@ -1,0 +1,50 @@
+.App{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  border: .5px solid navajowhite;
+  border-radius: 2%;
+  padding: 3%;
+  height: 80vh;
+  box-shadow: 2px  2px;
+}
+.cardContainer{
+  display: flex;
+}
+
+.noteConatiner{
+  position: relative;
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  top:11%;
+  align-items: center;
+  justify-content: center;
+}
+.noteConatiner div{
+  position: relative;
+}
+
+button{
+  display: flex;
+  position: relative;
+  z-index: 2;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #d11a1a;
+  border-radius: 110%;
+  align-items: center;
+  justify-content: center;
+  color:red;
+  background-color: rgb(210, 216, 123);
+  align-self: self-end;
+  font-weight: 800;
+  /* left: 100%; */
+  /* bottom : 130px; */
+}
+
+button:hover{
+  background-color: rgb(189, 196, 91); 
+  cursor: pointer;
+}

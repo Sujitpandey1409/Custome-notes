@@ -1,0 +1,20 @@
+.notes{
+    display: flex;
+    grid-template-columns: repeat(3, ifr);
+    flex-direction: column;
+    padding: 7px;
+    width: 90%;
+    gap:2%;
+    background-color: rgb(210, 216, 123);
+    color: rgb(5, 77, 77);
+    font-family: Helvetica Neue;
+    text-align: start;
+    margin: 4%;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px  4px;
+}
+
+.notes:hover{
+    box-shadow: 4px  7px;
+}
