@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import './input.css'
 import addNote from './button'
- 
+
 let Input = (props) => {
     let [inputValue, updateInputValue] = useState('')
     let [validText, setvalidText] = useState(true)
@@ -15,16 +15,16 @@ let Input = (props) => {
             props.inputChange(e.target.value)
             textArea.current.classList.remove('textWarning')
             message.current.classList.remove('textMessage')
-            message.current.textContent=`${100 - inputValue.length+1}/100`
-            setvalidText(true)
+            message.current.textContent = `${100 - inputValue.length + 1}/100`
         }
-        else { setvalidText(false) 
+        else {
+            setvalidText(false)
             textArea.current.classList.add('textWarning')
             message.current.textContent = 'maximum word length'
             message.current.classList.add('textMessage')
-            if(text_value.includes(' ')){
+            if (text_value.includes(' ')) {
                 message.current.textContent = 'Text size limit exceed'
-            }     
+            }
         }
         console.log(validText)
     }
@@ -32,11 +32,11 @@ let Input = (props) => {
     return (
         <div>
             <form onSubmit={addNote}>
-            <textarea ref = {textArea} className="input" type="text" placeholder="Your notes here" onChange={inputValueUpdate} title="Create a note" />
-            {/* {validText ? (<div>{100 - inputValue.length}/100</div>) :
+                <textarea ref={textArea} className="input" type="text" placeholder="Your notes here" onChange={inputValueUpdate} title="Create a note" id="myInput" />
+                {/* {validText ? (<div>{100 - inputValue.length}/100</div>) :
                 (<div style={{color:'red'}}>maximum word length</div>)
             } */}
-            <div ref={message}>{100 - inputValue.length}/100</div>
+                <div ref={message}>{100 - inputValue.length}/100</div>
             </form>
         </div>)
 }

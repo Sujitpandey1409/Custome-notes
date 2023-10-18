@@ -21,10 +21,11 @@
 
 .increased-size {
     position: fixed;
-    bottom: 80px; /* Center vertically */
-    left: 5%; /* Center horizontally */
-    height: 60vh; /* Occupies 90% of the viewport height */
-    width: 40vw;
+    /* bottom: 80px;
+    left: 5%;  */
+    /* height: 60vh;  */
+    /* width: 40vw; */
+    zoom: 150%;
     font-size: larger;
     z-index: 200;
     border-radius: 4%;
