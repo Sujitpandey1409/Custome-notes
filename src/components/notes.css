@@ -18,3 +18,21 @@
 .notes:hover{
     box-shadow: 4px  7px;
 }
+
+.increased-size {
+    position: fixed;
+    bottom: 80px; /* Center vertically */
+    left: 5%; /* Center horizontally */
+    height: 60vh; /* Occupies 90% of the viewport height */
+    width: 40vw;
+    font-size: larger;
+    z-index: 200;
+    border-radius: 4%;
+    backdrop-filter: blur(5px); /* Applies a blur effect */
+    background: rgb(210, 216, 123, 0.7); /* Adds a semi-transparent background for the blur effect */
+    box-shadow: none;
+  }
+
+  .increased-size:hover{
+    box-shadow: 4px  7px;
+  }
