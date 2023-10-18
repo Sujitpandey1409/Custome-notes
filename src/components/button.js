@@ -5,7 +5,6 @@ let Button = (prop)=>{
     let addNote =()=>{
         if(prop.inputVal){
         prop.addNote([...prop.note,prop.inputVal])}
-        // localStorage.setItem(prop.note,[...prop.note,prop.inputVal])}
         /* eslint-disable no-restricted-globals */
         // let confirmation = confirm("Do you want to add this to the note?? "+prop.inputVal)
         // confirmation?alert('ok'):alert('canceled')

@@ -11,13 +11,19 @@ function App() {
       setInput((input)=> input=valueFromInput)
   }
   // for updating the note data
-  let [note, updateNotes] = useState([])
+  let [note, updateNotes] = useState(() => {
+    const storedNotes = localStorage.getItem('notes');
+    return storedNotes ? JSON.parse(storedNotes) : [];
+  });
+  
   let addNote = (updatedValueFromButton)=>{
+    localStorage.setItem('notes', JSON.stringify(updatedValueFromButton));
     updateNotes(updatedValueFromButton)
     console.log(note)
   }
   // deleteNotes on clicking delete button
   function deleteNoteParent(newArray){
+    localStorage.setItem('notes', JSON.stringify(newArray));
     updateNotes((note)=>note=newArray)
   }
 
