@@ -27,6 +27,13 @@ function App() {
     setInput(clear)
   }
 
+  // Updating the note from Notes component
+  const updateNote = (updatedValueFromNotes)=>{
+    console.log(updatedValueFromNotes);
+    localStorage.setItem('notes', JSON.stringify(updatedValueFromNotes));
+    updateNotes(updatedValueFromNotes)
+  }
+
   // deleteNotes on clicking delete button
   function deleteNoteParent(newArray) {
     localStorage.setItem('notes', JSON.stringify(newArray));
@@ -40,8 +47,8 @@ function App() {
       <Button addNote={addNote} inputVal={input} note={note} />
       <div className='noteConatiner'>
         {
-          note.map((el, i) => {
-            return (<div><Notes note={note} key={i} id={i} p={el} deleteNoteParent={deleteNoteParent} />
+          note&&note.map((el, i) => {
+            return (<div><Notes note={note} key={i} id={i} p={el} deleteNoteParent={deleteNoteParent}  updateNote={updateNote} />
             </div>
             )
           })

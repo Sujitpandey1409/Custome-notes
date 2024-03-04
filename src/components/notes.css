@@ -37,3 +37,8 @@
   .increased-size:hover{
     box-shadow: 4px  7px;
   }
+  .editButton{
+    align-self: flex-start;
+    position: relative;
+    top:20px;
+  }

@@ -12,7 +12,7 @@ let Input = (props) => {
         const text_value = e.target.value
         if ((text_value.includes(' ') && text_value.length <= 100) || text_value.length <= 13) {
             updateInputValue(e.target.value)
-            props.inputChange(e.target.value)
+            {props.inputChange?props.inputChange(e.target.value):props.getUpdatedVal(e.target.value)}
             textArea.current.classList.remove('textWarning')
             message.current.classList.remove('textMessage')
             message.current.textContent = `${100 - inputValue.length + 1}/100`
@@ -32,7 +32,9 @@ let Input = (props) => {
     return (
         <div>
             <form onSubmit={addNote}>
-                <textarea ref={textArea} className="input" type="text" placeholder="Your notes here" onChange={inputValueUpdate} title="Create a note" id="myInput" />
+                {props.inputChange?<textarea ref={textArea}  className="input" type="text" placeholder="Your notes here" onChange={inputValueUpdate} title="Create a note" id="myInput" />:
+                 <textarea ref={textArea} className="input" defaultValue={props.value}  type="text" placeholder="Your updated notes here" onChange={inputValueUpdate} title="Update your note" id="myInput" />                   
+                }
                 {/* {validText ? (<div>{100 - inputValue.length}/100</div>) :
                 (<div style={{color:'red'}}>maximum word length</div>)
             } */}
